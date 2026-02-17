@@ -1,0 +1,194 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║              🪟 WINDOWS QUICK START GUIDE 🪟                          ║
+║                                                                       ║
+║              Fullstack Application - Windows Edition                 ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+✅ YES! THIS APPLICATION WORKS PERFECTLY ON WINDOWS!
+═══════════════════════════════════════════════════════════════════════
+
+
+📋 PREREQUISITES
+───────────────────────────────────────────────────────────────────────
+
+   Required Software:
+   ☐ Java 17+         → https://adoptium.net/
+   ☐ Node.js 18+      → https://nodejs.org/
+
+   ✅ Gradle is included (gradlew.bat) - no separate install needed!
+
+
+🚀 EASIEST WAY TO START (3 CLICKS!)
+───────────────────────────────────────────────────────────────────────
+
+   1. Open File Explorer
+   2. Navigate to: fullstack-app folder
+   3. Double-click: start.bat
+
+   Done! Both servers will start automatically in separate windows.
+
+
+🎯 MANUAL START (TWO COMMAND PROMPTS)
+───────────────────────────────────────────────────────────────────────
+
+   ┌─────────────────────────────────────────────────────────────────┐
+   │ Command Prompt #1 - BACKEND                                     │
+   │─────────────────────────────────────────────────────────────────│
+   │                                                                 │
+   │ C:\> cd path\to\fullstack-app\backend                          │
+   │ C:\> start-backend.bat                                         │
+   │                                                                 │
+   │ OR:                                                             │
+   │                                                                 │
+   │ C:\> gradlew.bat bootRun                                       │
+   │                                                                 │
+   │ ⏱ Wait for: "Started FullstackApplication"                     │
+   │ 🌐 Backend: http://localhost:8080                              │
+   │                                                                 │
+   └─────────────────────────────────────────────────────────────────┘
+
+   ┌─────────────────────────────────────────────────────────────────┐
+   │ Command Prompt #2 - FRONTEND                                    │
+   │─────────────────────────────────────────────────────────────────│
+   │                                                                 │
+   │ C:\> cd path\to\fullstack-app\frontend                         │
+   │ C:\> start-frontend.bat                                        │
+   │                                                                 │
+   │ OR:                                                             │
+   │                                                                 │
+   │ C:\> npm install       (first time only)                       │
+   │ C:\> npm start                                                 │
+   │                                                                 │
+   │ ⏱ Wait for: "Angular Live Development Server"                  │
+   │ 🌐 Frontend: http://localhost:4200                             │
+   │                                                                 │
+   └─────────────────────────────────────────────────────────────────┘
+
+
+🌐 OPEN YOUR BROWSER
+───────────────────────────────────────────────────────────────────────
+
+   Frontend Application:
+   → http://localhost:4200
+
+   You should see:
+   • Beautiful purple gradient background
+   • "Greeting from Backend" card
+   • "hi jagriti" in large purple text
+
+   Backend API:
+   → http://localhost:8080/api/greeting
+
+   Should return: hi jagriti
+
+
+📁 WINDOWS SCRIPTS INCLUDED
+───────────────────────────────────────────────────────────────────────
+
+   ✅ start.bat                    → Start both servers
+   ✅ backend/start-backend.bat    → Start backend only
+   ✅ backend/gradlew.bat          → Gradle wrapper
+   ✅ frontend/start-frontend.bat  → Start frontend only
+
+
+🧪 TEST ON WINDOWS
+───────────────────────────────────────────────────────────────────────
+
+   Command Prompt:
+   C:\> curl http://localhost:8080/api/greeting
+
+   PowerShell:
+   PS> Invoke-WebRequest -Uri http://localhost:8080/api/greeting
+
+   Browser:
+   http://localhost:8080/api/greeting
+
+   Expected: hi jagriti
+
+
+🔧 COMMON WINDOWS COMMANDS
+───────────────────────────────────────────────────────────────────────
+
+   Check if ports are in use:
+   C:\> netstat -ano | findstr :8080
+   C:\> netstat -ano | findstr :4200
+
+   Kill process on port:
+   C:\> netstat -ano | findstr :8080
+   C:\> taskkill /PID <PID> /F
+
+   Stop servers:
+   → Press Ctrl+C in each Command Prompt window
+   → Or close the Command Prompt windows
+
+
+🛠️ QUICK TROUBLESHOOTING
+───────────────────────────────────────────────────────────────────────
+
+   "Java is not recognized"
+   → Install Java from https://adoptium.net/
+   → Restart Command Prompt
+
+   "npm is not recognized"
+   → Install Node.js from https://nodejs.org/
+   → Restart Command Prompt
+
+   Port 8080 already in use
+   → Find process: netstat -ano | findstr :8080
+   → Kill it: taskkill /PID <PID> /F
+
+   Port 4200 already in use
+   → Find process: netstat -ano | findstr :4200
+   → Kill it: taskkill /PID <PID> /F
+
+
+📂 FILE LOCATIONS
+───────────────────────────────────────────────────────────────────────
+
+   Windows Batch Scripts:
+   ✅ start.bat                       → Root folder
+   ✅ backend\start-backend.bat       → Backend folder
+   ✅ backend\gradlew.bat             → Backend folder
+   ✅ frontend\start-frontend.bat     → Frontend folder
+
+   Detailed Guide:
+   📘 WINDOWS_GUIDE.md                → Complete Windows instructions
+
+
+✨ WINDOWS FEATURES
+───────────────────────────────────────────────────────────────────────
+
+   ✅ Native Windows batch scripts (.bat)
+   ✅ Works on Windows 10 & 11
+   ✅ Command Prompt compatible
+   ✅ PowerShell compatible
+   ✅ Windows Terminal compatible
+   ✅ Gradle wrapper included (no install needed)
+   ✅ Automatic prerequisite checking
+   ✅ Easy double-click startup
+
+
+🎉 SUMMARY FOR WINDOWS USERS
+───────────────────────────────────────────────────────────────────────
+
+   1. Install Java 17+ and Node.js 18+
+   2. Extract fullstack-app to any folder
+   3. Double-click start.bat
+   4. Open browser: http://localhost:4200
+   5. See "hi jagriti" displayed beautifully!
+
+   That's it! 🚀
+
+
+═══════════════════════════════════════════════════════════════════════
+   Windows Compatible: ✅ YES!
+   Works on: Windows 10, Windows 11
+   Last Updated: February 17, 2026
+   Status: ✅ READY TO RUN
+═══════════════════════════════════════════════════════════════════════
+
+
+For detailed Windows setup instructions, see: WINDOWS_GUIDE.md
+
