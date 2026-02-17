@@ -1,166 +1,59 @@
-# Fullstack Application Template
+# Frontend
 
-A full-stack application template with Angular 21 frontend and Spring Boot 3.4 backend.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.20.
 
-**✅ Cross-Platform:** Works on macOS, Linux, and Windows!  
-**📚 Windows Users:** See [WINDOWS_GUIDE.md](WINDOWS_GUIDE.md) for detailed Windows setup instructions.
+## Development server
 
-## Project Structure
+To start a local development server, run:
 
-```
-fullstack-app/
-├── backend/          # Spring Boot 3.4 Backend
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/example/fullstack/
-│   │       │       ├── FullstackApplication.java
-│   │       │       └── controller/
-│   │       │           └── GreetingController.java
-│   │       └── resources/
-│   │           └── application.properties
-│   ├── build.gradle
-│   ├── settings.gradle
-│   └── gradlew
-│
-└── frontend/         # Angular 21 Frontend
-    ├── src/
-    │   └── app/
-    │       ├── services/
-    │       │   └── greeting.service.ts
-    │       ├── app.component.ts
-    │       ├── app.component.html
-    │       ├── app.component.css
-    │       └── app.config.ts
-    └── package.json
-```
-
-## Features
-
-- **Backend**: Spring Boot REST API with CORS enabled
-- **Frontend**: Angular 21 with standalone components
-- **API Call**: Frontend makes HTTP GET request to backend endpoint
-- **Response**: Backend returns "hi jagriti" string displayed on homepage
-
-## Prerequisites
-
-- Java 17 or higher
-- Java 17 or higher
-- Node.js 18+ and npm
-- Angular CLI 19+
-
-## Getting Started
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-```bash
-cd backend
-```
-
-2. Run the Spring Boot application:
-
-**Unix/Mac/Linux:**
-```bash
-./gradlew bootRun
-```
-
-**Windows (Command Prompt):**
-```batch
-gradlew.bat bootRun
-```
-
-**Or use the startup scripts:**
-- Unix/Mac: `./start-backend.sh`
-- Windows: `start-backend.bat`
-
-The backend will start on `http://localhost:8080`
-
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-```bash
-cd frontend
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm start
-```
-
-Or:
 ```bash
 ng serve
 ```
 
-The frontend will start on `http://localhost:4200`
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## API Endpoints
+## Code scaffolding
 
-### Backend API
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-- **GET** `/api/greeting` - Returns greeting message "hi jagriti"
-  - Response: Plain text string
-
-## Architecture
-
-### Backend
-- **Controller**: `GreetingController` handles HTTP requests
-- **CORS**: Configured to allow requests from `http://localhost:4200`
-- **Port**: Runs on port 8080
-
-### Frontend
-- **Service**: `GreetingService` makes HTTP calls to backend
-- **Component**: `AppComponent` displays the greeting message
-- **Styling**: Modern gradient design with animations
-
-## How It Works
-
-1. Angular app loads and `AppComponent` initializes
-2. `ngOnInit()` calls `GreetingService.getGreeting()`
-3. Service makes HTTP GET request to `http://localhost:8080/api/greeting`
-4. Spring Boot backend returns "hi jagriti" string
-5. Frontend displays the message on the homepage with styling
-
-## Testing
-
-### Test Backend
 ```bash
-curl http://localhost:8080/api/greeting
+ng generate component component-name
 ```
 
-Expected output: `hi jagriti`
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-### Test Frontend
-Open browser at `http://localhost:4200` and you should see the greeting message displayed in a styled card.
+```bash
+ng generate --help
+```
 
-## Technology Stack
+## Building
 
-- **Frontend**:
-  - Angular 21
-  - TypeScript
-  - RxJS
-  - CSS3
+To build the project run:
 
-- **Backend**:
-  - Spring Boot 3.4.2
-  - Java 17
-  - Gradle
-  - Spring Web
+```bash
+ng build
+```
 
-## Development Notes
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-- Frontend runs on port 4200
-- Backend runs on port 8080
-- CORS is enabled for local development
-- Both servers must be running for the app to work properly
+## Running unit tests
 
-## License
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-MIT License
+```bash
+ng test
+```
 
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
